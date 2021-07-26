@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Studio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+
+  <body>
+  <!--Header-->
+  <header class="header">
+    <div class="container header__container">
+      <nav class="navigation">
+        <a class="logo link" href="./index.html" lang="en"
+          >Web<span class="logo--black">Studio</span></a
+        >
+        <ul class="menu list">
+          <li class="menu__item">
+            <a class="menu__link link" href="./index.html">Студия</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link menu__link--current" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#contacts-studio">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="contacts list">
+        <li class="contacts__item">
+          <a class="contacts__link link" href="mailto:info@devstudio.com">
+            <svg class="contacts__icon" width="16" height="12">
+              <use href="./images/icons.svg#icon-mail"></use>
+            </svg>
+            info@devstudio.com</a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__link link" href="tel:+380961111111">
+            <svg class="contacts__icon" width="10" height="16">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+            +38 096 111 11 11</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+    <main>
+      <!--Portfolio-->
+      <section class="section">
+        <h2 class="visually-hidden">Портфолио</h2>
+        <div class="container">
+          <ul class="filter-list list">
+            <li class="filter-list__item">
+              <button class="filter-list__btn filter-list__btn--current" type="button">Все</button>
+            </li>
+            <li class="filter-list__item">
+              <button class="filter-list__btn" type="button">Веб-сайты</button>
+            </li>
+            <li class="filter-list__item">
+              <button class="filter-list__btn" type="button">Приложения</button>
+            </li>
+            <li class="filter-list__item">
+              <button class="filter-list__btn" type="button">Дизайн</button>
+            </li>
+            <li class="filter-list__item">
+              <button class="filter-list__btn" type="button">Маркетинг</button>
+            </li>
+          </ul>
+          <ul class="portfolio list">
+          <li class="portfolio__item">
+            <a class="portfolio__link link" href="#">
+              <div class="product">
+                <img class="product__photo" src="images/techno_crack.jpg" alt="Ноутбук с веб-сайтом" width="370" height="294" />
+                <div class="product__thumb">
+                  <p class="product__description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
+                </div>
+              </div>
+              <div class="product__border">
+                <h3 class="product__name">Технокряк</h3>
+                <p class="product__type">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <a class="portfolio__link link" href="#">
+              <div class="product">
+                <img class="product__photo" src="images/basketball.jpg" alt="Два баскетболиста" width="370" height="294" />
+                <div class="product__thumb">
+                  <p class="product__description">Постеры – невероятно творческая форма дизайна. Их цель заключается в том, чтобы захватить и удержать внимание потребителя. Постер «New Orlean vs Golden Star» вписывается в современный иллюстрированный стиль. Этот динамичный, яркий стиль идеально подходит для спортивного мероприятия.</p>
+                </div>
+              </div>
+              <div class="product__border">
+                <h3 class="product__name">Постер <span lang="en">New Orlean vs Golden Star</span></h3>
+                <p class="product__type">Дизайн</p>
+              </div>
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <a class="portfolio__link link" href="#">
+              <div class="product">
+                <img class="product__photo" src="images/seafood_restaraunt.jpg" alt="Эмблема ресторана" width="370" height="294" />
+                <div class="product__thumb">
+                  <p class="product__description">Приложение для ресторана способно увеличить средние чеки, оптимизировать рабочие процессы, снизить затраты на персонал, увеличить клиентуру и много чего еще. Ключевые составляющие приложения ресторана Seafood – это возможность доставки, максимально удобное меню для просмотра позиций и выбора блюд, путь заказа всего в нескольких кликов.</p>
+                </div>
+              </div>
+              <div class="product__border">
+                <h3 class="product__name">Ресторан <span lang="en">Seafood</span></h3>
+                <p class="product__type">Приложение</p>
+              </div>
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <a class="portfolio__link link" href="#">
+              <div class="product">
+                <img class="product__photo" src="images/headphones.jpg" alt="Наушники" width="370" height="294" />
+                <div class="product__thumb">
+                  <p class="product__description">Проект Prime — классический системный подход, свойственный техническим специалистам, объединенный со свободным креативным мышлением дизайнерских и маркетинговых команд.</p>
+                </div>
+              </div>
+              <div class="product__border">
+                <h3 class="product__name">Проект <span lang="en">Prime</span></h3>
+                <p class="product__type">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <a class="portfolio__link link" href="#">
+              <div class="product">
+                <img class="product__photo" src="images/boxes.jpg" alt="Коробки" width="370" height="294" />
+                <div class="product__thumb">
+                  <p class="product__description">Победитель в номинации "Выбор редакции" авторитетного журнала PC Magazine: "Существует множество качественных сервисов для хранения и синхронизации файлов, однако приложение Boxes остается вне всякой конкуренции."</p>
+                </div>
+              </div>
+              <div class="product__border">
+                <h3 class="product__name">Проект <span lang="en">Boxes</span></h3>
+                <p class="product__type">Приложение</p>
+              </div>
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <a class="portfolio__link link" href="#">
+              <div class="product">
+                <img class="product__photo" src="images/monitor.jpg" alt="Компьютер" width="370" height="294" />
+                <div class="product__thumb">
+                  <p class="product__description">Сайт Inspiration has no Borders является своеобразной соцсетью. Он предназначен для любителей творчества. Здесь можно найти множество идей не только для интернет-проектов в частности, но и для корпоративного стиля вообще.</p>
+                </div>
+              </div>
+              <div class="product__border">
+                <h3 class="product__name" lang="en">Inspiration has no Borders</h3>
+                <p class="product__type">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <a class="portfolio__link link" href="#">
+              <div class="product">
+                <img class="product__photo" src="images/magazine.jpg" alt="Журнал" width="370" height="294" />
+                <div class="product__thumb">
+                  <p class="product__description">Профессиональный дизайн издания Limited Edition позволяет максимально подстроиться под предпочтения и ожидания целевой аудитории и разработать конечный печатный продукт не только красивым, но и удобным и хорошо структурированным – эффективным инструментом продаж компании.</p>
+                </div>
+              </div>
+              <div class="product__border">
+                <h3 class="product__name">Издание <span lang="en">Limited Edition</span></h3>
+                <p class="product__type">Дизайн</p>
+              </div>
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <a class="portfolio__link link" href="#">
+              <div class="product">
+                <img class="product__photo" src="images/label.jpg" alt="Лейба" width="370" height="294" />
+                <div class="product__thumb">
+                  <p class="product__description">Точно так же, как наши имена являются частью нашей идентичности, лейблы представляют разные бренды, они могут даже показать, что эти бренды вообще представляют и выгодно их продать . Поэтому проект LAB неотступно руководствуется рядом принципов и стандартов, которые выгодно отличают нас от конкурентов и позволяют качественно продвигать компании.</p>
+                </div>
+              </div>
+              <div class="product__border">
+                <h3 class="product__name">Проект <span lang="en">LAB</span></h3>
+                <p class="product__type">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <a class="portfolio__link link" href="#">
+              <div class="product">
+                <img class="product__photo" src="images/laptop.jpg" alt="Ноутбук" width="370" height="294" />
+                <div class="product__thumb">
+                  <p class="product__description">Growing Business - отличное приложение для составления отчетов о расходах вашего бизнеса. Приложение записывает данные о ваших покупках, составляет отчеты и помогает вам возмещать расходы сотрудникам, собирает все ваши данные о закупках для вашей финансовой команды, чтобы упростить финансовую отчетность.</p>
+                </div>
+              </div>
+              <div class="product__border">
+                <h3 class="product__name" lang="en">Growing Business</h3>
+                <p class="product__type">Приложение</p>
+              </div>
+            </a>
+          </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+     <!--Footer-->
+     <footer id="contacts-studio" class="footer">
+      <div class="container footer__container">
+        <div class="footer__contacts-box">
+          <a class="logo link" href="./index.html" lang="en">Web<span class="logo--white">Studio</span></a>
+          <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
+          <ul class="main-contacts list">
+            <li class="main-contacts__item">
+              <a class="main-contacts__link link" href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li class="main-contacts__item">
+              <a class="main-contacts__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__social-box">
+          <p class="footer__title">присоединяйтесь</p>
+          <ul class="social-list list">
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--dark-theme link" href="https://www.instagram.com/" rel="noopener noreferrer">
+                <svg class="social-list__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--dark-theme link" href="https://twitter.com/" rel="noopener noreferrer">
+                <svg class="social-list__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--dark-theme link" href="https://www.facebook.com/" rel="noopener noreferrer">
+                <svg class="social-list__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--dark-theme link" href="https://www.linkedin.com" rel="noopener noreferrer">
+                <svg class="social-list__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__modal-box">
+          <p class="footer__title">Подпишитесь на рассылку</p>
+          <form class="footer__modal-form" action="#">
+            <label class="footer__modal-lable">
+              <input class="footer__modal-input" type="email" name="footer-mail" placeholder="E-mail">
+            </label>
+            <button class="footer__subscribe-btn btn" type="submit">Подписаться
+              <svg class="footer__subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
