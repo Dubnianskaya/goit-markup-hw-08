@@ -3,11 +3,6 @@
     background-color: var(--secondary-background-color);
   }
   
-  .footer__container {
-    display: flex;
-    align-items: baseline;
-  }
-  
   .logo--white {
     color: #FFFFFF;
   }
@@ -26,7 +21,7 @@
   }
   
   .main-contacts__item {
-    margin-top: 9px;
+    margin-top: 8px;
   }
   
   .main-contacts__link {
@@ -41,11 +36,7 @@
       color: #FFFFFF;
     }
   }
-  
-  .footer__social-box {
-    margin-left: 70px;
-  }
-  
+
   .footer__title {
     @extend %uppercase;
     margin-bottom: 20px;
@@ -55,23 +46,10 @@
     fill: #ffffff;
     background-color:rgba(255, 255, 255, 0.1);
   }
-  
-  .footer__modal-box {
-    margin-left: 93px;
-  }
-  
-  .footer__modal-form {
-    display: flex;
-    align-items: center;
-  }
-  
-  .footer__modal-lable {
-    margin-right: 12px;
-  }
-  
+
   .footer__modal-input {
     height: 50px;
-    width: 358px;
+    width: 290px;
     padding-left: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -95,6 +73,8 @@
   
   .footer__subscribe-btn {
     display: flex;
+    align-items: center;
+    margin: 0 auto;
     padding: 10px 28px;
   }
   
@@ -102,3 +82,72 @@
     margin-left: 10px;
     fill: #ffffff
   }
+
+  @media screen and (max-width: 767px) {
+    .footer__social-box {
+      margin-top: 60px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .connection-box {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-around;
+    }
+
+    .footer__modal-input {
+      width: 450px;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    .footer__container {
+      text-align: center;
+    }
+
+    .footer__modal-box {
+      margin-top: 60px;
+    }
+
+    .footer__subscribe-btn {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .footer__container {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .main-contacts__item {
+      margin-top: 9px;
+    }
+
+    .footer__social-box {
+      margin-left: 70px;
+    }
+
+    .footer__modal-box {
+      margin-left: 93px;
+    }
+    
+    .footer__modal-form {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer__modal-lable {
+      margin-right: 12px;
+    }  
+
+    .footer__modal-input {
+      width: 358px;
+    }
+  }
+
+  
+  

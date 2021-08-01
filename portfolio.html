@@ -16,15 +16,15 @@
   <header class="header">
     <div class="container header__container">
       <nav class="navigation">
-        <a class="logo link" href="./index.html" lang="en"
+        <a class="logo logo--header link" href="./index.html" lang="en"
           >Web<span class="logo--black">Studio</span></a
         >
         <ul class="menu list">
           <li class="menu__item">
-            <a class="menu__link link" href="./index.html">Студия</a>
+            <a class="menu__link link menu__link--current" href="./index.html">Студия</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link link menu__link--current" href="./portfolio.html">Портфолио</a>
+            <a class="menu__link link" href="./portfolio.html">Портфолио</a>
           </li>
           <li class="menu__item">
             <a class="menu__link link" href="#contacts-studio">Контакты</a>
@@ -34,19 +34,70 @@
       <ul class="contacts list">
         <li class="contacts__item">
           <a class="contacts__link link" href="mailto:info@devstudio.com">
-            <svg class="contacts__icon" width="16" height="12">
+            <svg class="contacts__icon contacts__icon--mail" width="14" height="10">
               <use href="./images/icons.svg#icon-mail"></use>
             </svg>
             info@devstudio.com</a>
         </li>
         <li class="contacts__item">
           <a class="contacts__link link" href="tel:+380961111111">
-            <svg class="contacts__icon" width="10" height="16">
+            <svg class="contacts__icon contacts__icon--phone" width="10" height="14">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
             +38 096 111 11 11</a>
         </li>
       </ul>
+      <button class="burger-btn mobile-menu__btn" type="button" data-menu-open>
+        <svg class="burger-btn__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu" data-menu>
+        <div class="mobile-menu__container container">
+          <button class="mobile-menu__close-btn mobile-menu__btn" type="button" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu__thumb">
+            <ul class="mobile-menu__list list">
+              <li class="mobile-menu__list-item">
+                <a class="mobile-menu__link link" href="./index.html">Студия</a>
+              </li>
+              <li class="mobile-menu__list-item">
+                <a class="mobile-menu__link link mobile-menu__link--current" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mobile-menu__list-item">
+                <a class="mobile-menu__link link" href="#contacts-studio">Контакты</a>
+              </li>
+            </ul>
+         </div>
+         <div class="mobile-menu__thumb">
+            <ul class="mobile-menu__contacts list">
+              <li class="mobile-menu__contacts-item">
+                <a class="mobile-menu__phone link" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+              <li class="mobile-menu__contacts-item">
+                <a class="mobile-menu__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__social-list list">
+              <li class="mobile-menu__social-list-item">
+                <a class="mobile-menu__social-link link" href="https://www.instagram.com/" target="_blank" rel="noopener norefferer">Instagram</a>
+              </li>
+              <li class="mobile-menu__social-list-item">
+                <a class="mobile-menu__social-link link" href="https://twitter.com/" target="_blank" rel="noopener norefferer">Twitter</a>
+              </li>
+              <li class="mobile-menu__social-list-item">
+                <a class="mobile-menu__social-link link" href="https://www.facebook.com/" target="_blank" rel="noopener norefferer">Facebook</a>
+              </li>
+              <li class="mobile-menu__social-list-item">
+                <a class="mobile-menu__social-link link" href="https://www.linkedin.com" target="_blank" rel="noopener norefferer">LinkedIn</a>
+              </li>
+            </ul>
+         </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -76,7 +127,27 @@
           <li class="portfolio__item">
             <a class="portfolio__link link" href="#">
               <div class="product">
-                <img class="product__photo" src="images/techno_crack.jpg" alt="Ноутбук с веб-сайтом" width="370" height="294" />
+                <picture>
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/techno_crack_desktop.webp 1x, ./images/techno_crack_desktop@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/techno_crack_desktop.jpg 1x, ./images/techno_crack_desktop@2x.jpg 2x">
+  
+                  <source media="(min-width: 768px)"
+                      srcset="./images/techno_crack_tablet.webp 1x, ./images/techno_crack_tablet@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 768px)"
+                      srcset="./images/techno_crack_tablet.jpg 1x, ./images/techno_crack_tablet@2x.jpg 2x">
+  
+                  <source
+                      srcset="./images/techno_crack_phone.webp 1x, ./images/techno_crack_phone@2x.webp 2x"
+                      type="image/webp">
+                  <source
+                      srcset="./images/techno_crack_phone.jpg 1x, ./images/techno_crack_phone@2x.jpg 2x">
+  
+                  <img class="product__photo" src="#" alt="Ноутбук с веб-сайтом" />
+              </picture>
                 <div class="product__thumb">
                   <p class="product__description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                 </div>
@@ -90,7 +161,27 @@
           <li class="portfolio__item">
             <a class="portfolio__link link" href="#">
               <div class="product">
-                <img class="product__photo" src="images/basketball.jpg" alt="Два баскетболиста" width="370" height="294" />
+                <picture>
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/basketball_desktop.webp 1x, ./images/basketball_desktop@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/basketball_desktop.jpg 1x, ./images/basketball_desktop@2x.jpg 2x">
+  
+                  <source media="(min-width: 768px)"
+                      srcset="./images/basketball_tablet.webp 1x, ./images/basketball_tablet@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 768px)"
+                      srcset="./images/basketball_tablet.jpg 1x, ./images/basketball_tablet@2x.jpg 2x">
+  
+                  <source
+                      srcset="./images/basketball_phone.webp 1x, ./images/basketball_phone@2x.webp 2x"
+                      type="image/webp">
+                  <source
+                      srcset="./images/basketball_phone.jpg 1x, ./images/basketball_phone@2x.jpg 2x">
+  
+                  <img class="product__photo" src="#" alt="Два баскетболиста" />
+              </picture>
                 <div class="product__thumb">
                   <p class="product__description">Постеры – невероятно творческая форма дизайна. Их цель заключается в том, чтобы захватить и удержать внимание потребителя. Постер «New Orlean vs Golden Star» вписывается в современный иллюстрированный стиль. Этот динамичный, яркий стиль идеально подходит для спортивного мероприятия.</p>
                 </div>
@@ -104,7 +195,27 @@
           <li class="portfolio__item">
             <a class="portfolio__link link" href="#">
               <div class="product">
-                <img class="product__photo" src="images/seafood_restaraunt.jpg" alt="Эмблема ресторана" width="370" height="294" />
+                <picture>
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/seafood_restaraunt_desktop.webp 1x, ./images/seafood_restaraunt_desktop@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/seafood_restaraunt_desktop.jpg 1x, ./images/seafood_restaraunt_desktop@2x.jpg 2x">
+  
+                  <source media="(min-width: 768px)"
+                      srcset="./images/seafood_restaraunt_tablet.webp 1x, ./images/seafood_restaraunt_tablet@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 768px)"
+                      srcset="./images/seafood_restaraunt_tablet.jpg 1x, ./images/seafood_restaraunt_tablet@2x.jpg 2x">
+  
+                  <source
+                      srcset="./images/seafood_restaraunt_phone.webp 1x, ./images/seafood_restaraunt_phone@2x.webp 2x"
+                      type="image/webp">
+                  <source
+                      srcset="./images/seafood_restaraunt_phone.jpg 1x, ./images/seafood_restaraunt_phone@2x.jpg 2x">
+  
+                  <img class="product__photo" src="#" alt="Эмблема ресторана" />
+              </picture>
                 <div class="product__thumb">
                   <p class="product__description">Приложение для ресторана способно увеличить средние чеки, оптимизировать рабочие процессы, снизить затраты на персонал, увеличить клиентуру и много чего еще. Ключевые составляющие приложения ресторана Seafood – это возможность доставки, максимально удобное меню для просмотра позиций и выбора блюд, путь заказа всего в нескольких кликов.</p>
                 </div>
@@ -118,7 +229,27 @@
           <li class="portfolio__item">
             <a class="portfolio__link link" href="#">
               <div class="product">
-                <img class="product__photo" src="images/headphones.jpg" alt="Наушники" width="370" height="294" />
+                <picture>
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/headphones_desktop.webp 1x, ./images/headphones_desktop@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/headphones_desktop.jpg 1x, ./images/headphones_desktop@2x.jpg 2x">
+  
+                  <source media="(min-width: 768px)"
+                      srcset="./images/headphones_tablet.webp 1x, ./images/headphones_tablet@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 768px)"
+                      srcset="./images/headphones_tablet.jpg 1x, ./images/headphones_tablet@2x.jpg 2x">
+  
+                  <source
+                      srcset="./images/headphones_phone.webp 1x, ./images/headphones_phone@2x.webp 2x"
+                      type="image/webp">
+                  <source
+                      srcset="./images/headphones_phone.jpg 1x, ./images/headphones_phone@2x.jpg 2x">
+  
+                  <img class="product__photo" src="#" alt="Наушники" />
+              </picture>
                 <div class="product__thumb">
                   <p class="product__description">Проект Prime — классический системный подход, свойственный техническим специалистам, объединенный со свободным креативным мышлением дизайнерских и маркетинговых команд.</p>
                 </div>
@@ -132,7 +263,27 @@
           <li class="portfolio__item">
             <a class="portfolio__link link" href="#">
               <div class="product">
-                <img class="product__photo" src="images/boxes.jpg" alt="Коробки" width="370" height="294" />
+                <picture>
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/boxes_desktop.webp 1x, ./images/boxes_desktop@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/boxes_desktop.jpg 1x, ./images/boxes_desktop@2x.jpg 2x">
+  
+                  <source media="(min-width: 768px)"
+                      srcset="./images/boxes_tablet.webp 1x, ./images/boxes_tablet@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 768px)"
+                      srcset="./images/boxes_tablet.jpg 1x, ./images/boxes_tablet@2x.jpg 2x">
+  
+                  <source
+                      srcset="./images/boxes_phone.webp 1x, ./images/boxes_phone@2x.webp 2x"
+                      type="image/webp">
+                  <source
+                      srcset="./images/boxes_phone.jpg 1x, ./images/boxes_phone@2x.jpg 2x">
+  
+                  <img class="product__photo" src="#" alt="Коробки" />
+              </picture>
                 <div class="product__thumb">
                   <p class="product__description">Победитель в номинации "Выбор редакции" авторитетного журнала PC Magazine: "Существует множество качественных сервисов для хранения и синхронизации файлов, однако приложение Boxes остается вне всякой конкуренции."</p>
                 </div>
@@ -146,7 +297,27 @@
           <li class="portfolio__item">
             <a class="portfolio__link link" href="#">
               <div class="product">
-                <img class="product__photo" src="images/monitor.jpg" alt="Компьютер" width="370" height="294" />
+                <picture>
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/monitor_desktop.webp 1x, ./images/monitor_desktop@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/monitor_desktop.jpg 1x, ./images/monitor_desktop@2x.jpg 2x">
+  
+                  <source media="(min-width: 768px)"
+                      srcset="./images/monitor_tablet.webp 1x, ./images/monitor_tablet@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 768px)"
+                      srcset="./images/monitor_tablet.jpg 1x, ./images/monitor_tablet@2x.jpg 2x">
+  
+                  <source
+                      srcset="./images/monitor_phone.webp 1x, ./images/monitor_phone@2x.webp 2x"
+                      type="image/webp">
+                  <source
+                      srcset="./images/monitor_phone.jpg 1x, ./images/monitor_phone@2x.jpg 2x">
+  
+                  <img class="product__photo" src="#" alt="Компьютер" />
+              </picture>
                 <div class="product__thumb">
                   <p class="product__description">Сайт Inspiration has no Borders является своеобразной соцсетью. Он предназначен для любителей творчества. Здесь можно найти множество идей не только для интернет-проектов в частности, но и для корпоративного стиля вообще.</p>
                 </div>
@@ -160,7 +331,27 @@
           <li class="portfolio__item">
             <a class="portfolio__link link" href="#">
               <div class="product">
-                <img class="product__photo" src="images/magazine.jpg" alt="Журнал" width="370" height="294" />
+                <picture>
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/magazine_desktop.webp 1x, ./images/magazine_desktop@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/magazine_desktop.jpg 1x, ./images/magazine_desktop@2x.jpg 2x">
+  
+                  <source media="(min-width: 768px)"
+                      srcset="./images/magazine_tablet.webp 1x, ./images/magazine_tablet@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 768px)"
+                      srcset="./images/magazine_tablet.jpg 1x, ./images/magazine_tablet@2x.jpg 2x">
+  
+                  <source
+                      srcset="./images/magazine_phone.webp 1x, ./images/magazine_phone@2x.webp 2x"
+                      type="image/webp">
+                  <source
+                      srcset="./images/magazine_phone.jpg 1x, ./images/magazine_phone@2x.jpg 2x">
+  
+                  <img class="product__photo" src="#" alt="Журнал" />
+              </picture>
                 <div class="product__thumb">
                   <p class="product__description">Профессиональный дизайн издания Limited Edition позволяет максимально подстроиться под предпочтения и ожидания целевой аудитории и разработать конечный печатный продукт не только красивым, но и удобным и хорошо структурированным – эффективным инструментом продаж компании.</p>
                 </div>
@@ -174,7 +365,26 @@
           <li class="portfolio__item">
             <a class="portfolio__link link" href="#">
               <div class="product">
-                <img class="product__photo" src="images/label.jpg" alt="Лейба" width="370" height="294" />
+                <picture>
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/label_desktop.webp 1x, ./images/label_desktop@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/label_desktop.jpg 1x, ./images/label_desktop@2x.jpg 2x">
+  
+                  <source media="(min-width: 768px)"
+                      srcset="./images/label_tablet.webp 1x, ./images/label_tablet@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 768px)"
+                      srcset="./images/label_tablet.jpg 1x, ./images/label_tablet@2x.jpg 2x">
+  
+                  <source
+                      srcset="./images/label_phone.webp 1x, ./images/label_phone@2x.webp 2x"
+                      type="image/webp">
+                  <source
+                      srcset="./images/label_phone.jpg 1x, ./images/label_phone@2x.jpg 2x">
+                  <img class="product__photo" src="#" alt="Лейба" />
+              </picture>
                 <div class="product__thumb">
                   <p class="product__description">Точно так же, как наши имена являются частью нашей идентичности, лейблы представляют разные бренды, они могут даже показать, что эти бренды вообще представляют и выгодно их продать . Поэтому проект LAB неотступно руководствуется рядом принципов и стандартов, которые выгодно отличают нас от конкурентов и позволяют качественно продвигать компании.</p>
                 </div>
@@ -188,7 +398,27 @@
           <li class="portfolio__item">
             <a class="portfolio__link link" href="#">
               <div class="product">
-                <img class="product__photo" src="images/laptop.jpg" alt="Ноутбук" width="370" height="294" />
+                <picture>
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/laptop_desktop.webp 1x, ./images/laptop_desktop@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 1200px)"
+                      srcset="./images/laptop_desktop.jpg 1x, ./images/laptop_desktop@2x.jpg 2x">
+  
+                  <source media="(min-width: 768px)"
+                      srcset="./images/laptop_tablet.webp 1x, ./images/laptop_tablet@2x.webp 2x"
+                      type="image/webp">
+                  <source media="(min-width: 768px)"
+                      srcset="./images/laptop_tablet.jpg 1x, ./images/laptop_tablet@2x.jpg 2x">
+  
+                  <source
+                      srcset="./images/laptop_phone.webp 1x, ./images/laptop_phone@2x.webp 2x"
+                      type="image/webp">
+                  <source
+                      srcset="./images/laptop_phone.jpg 1x, ./images/laptop_phone@2x.jpg 2x">
+  
+                  <img class="product__photo" src="#" alt="Ноутбук" />
+              </picture>
                 <div class="product__thumb">
                   <p class="product__description">Growing Business - отличное приложение для составления отчетов о расходах вашего бизнеса. Приложение записывает данные о ваших покупках, составляет отчеты и помогает вам возмещать расходы сотрудникам, собирает все ваши данные о закупках для вашей финансовой команды, чтобы упростить финансовую отчетность.</p>
                 </div>
@@ -207,50 +437,52 @@
      <!--Footer-->
      <footer id="contacts-studio" class="footer">
       <div class="container footer__container">
-        <div class="footer__contacts-box">
-          <a class="logo link" href="./index.html" lang="en">Web<span class="logo--white">Studio</span></a>
-          <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
-          <ul class="main-contacts list">
-            <li class="main-contacts__item">
-              <a class="main-contacts__link link" href="mailto:info@example.com">info@example.com</a>
-            </li>
-            <li class="main-contacts__item">
-              <a class="main-contacts__link link" href="tel:+380991111111">+38 099 111 11 11</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__social-box">
-          <p class="footer__title">присоединяйтесь</p>
-          <ul class="social-list list">
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--dark-theme link" href="https://www.instagram.com/" rel="noopener noreferrer">
-                <svg class="social-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--dark-theme link" href="https://twitter.com/" rel="noopener noreferrer">
-                <svg class="social-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--dark-theme link" href="https://www.facebook.com/" rel="noopener noreferrer">
-                <svg class="social-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--dark-theme link" href="https://www.linkedin.com" rel="noopener noreferrer">
-                <svg class="social-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="connection-box">
+          <div class="footer__contacts-box">
+            <a class="logo link" href="./index.html" lang="en">Web<span class="logo--white">Studio</span></a>
+            <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
+            <ul class="main-contacts list">
+              <li class="main-contacts__item">
+                <a class="main-contacts__link link" href="mailto:info@example.com">info@example.com</a>
+              </li>
+              <li class="main-contacts__item">
+                <a class="main-contacts__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__social-box">
+            <p class="footer__title">присоединяйтесь</p>
+            <ul class="social-list list">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--dark-theme link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--dark-theme link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--dark-theme link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--dark-theme link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="footer__modal-box">
           <p class="footer__title">Подпишитесь на рассылку</p>
@@ -267,5 +499,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/menu.js"></script>
   </body>
 </html>
