@@ -88,7 +88,8 @@
 
     &::before {
       content: "";
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       width: 16px;
       height: 15px;
       margin-right: 8px;
