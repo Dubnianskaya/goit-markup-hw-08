@@ -538,19 +538,21 @@ body {
   position: relative;
 }
 
+.mobile-menu__social-list-item:not(:last-child) {
+  margin-right: 20px;
+}
+
 .mobile-menu__social-list-item:not(:last-child):after {
   content: "";
   position: absolute;
   width: 22px;
   height: 0px;
-  right: -10px;
   top: 8px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
 }
 
 .mobile-menu__social-link {
-  padding: 5px 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.22;
